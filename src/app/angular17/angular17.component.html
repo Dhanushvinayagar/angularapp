@@ -1,0 +1,81 @@
+<div>
+    <h1>{{title}}</h1>
+    <p>{{num1+num2}}</p>
+    <hr>
+    <hr>
+    <h1>If else :</h1>
+    @if (num1>1) {
+    <p>hi</p>
+    }
+    @else if (num2>1) {
+    <p>
+      hello
+    </p>
+    }
+    @else {
+    <p>
+      bye
+    </p>
+    }
+     
+    <hr>
+    <hr>
+    <h1>For </h1>
+    @for (item of list ; track $index) {
+    <p> {{$index}} {{ item }}</p>
+    }
+    @empty {
+    <p>No items found</p>
+    }
+    <hr>
+    <hr>
+    @for (item of items; track item; let index = $index; let count = $count ;let first = $first, last = $last;let odd =
+    $odd, even = $even) {
+    @if (first) {
+    <p>First - Length {{count}}
+    </p>
+    }
+    @if (last) {
+    <p>Last</p>
+    }
+    @if (odd) {
+    <p>Odd</p>
+    }
+    @if (even) {
+    <p>Even</p>
+    }
+    <p> {{index}} {{ item }}</p>
+    <hr>
+    }
+    @empty {
+    <p>No items found</p>
+    }
+    <hr>
+    <hr>
+    <h1>Case</h1>
+    @switch (num1) {
+  
+    @case (1) {
+    <p>One</p>
+    }
+    @case (2) {
+    <p>Two</p>
+    }
+    @default {
+    <p>Number not equal to one and two</p>
+    }
+    }
+    <hr>
+    <hr>
+    <h2>Defer</h2>
+    @defer{
+    <p>large-component or Load later </p>
+    <!-- <large-component /> -->
+    } @placeholder (minimum 1s){
+    Placeholder
+    } @loading(minimum 2s; after 4s) {
+    Loading...
+    } @error {
+    Something went wrong
+    }
+  </div>
