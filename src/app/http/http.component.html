@@ -18,26 +18,34 @@ Select any month
 
 <button mat-raised-button color="primary" (click)="getData()">View Todo</button>
 @if(todoData.length){
+    
 
 <button mat-raised-button color="warn" (click)="addCard()">Add new Todo</button>
+
 @for (item of todoData; track item) {
-<div >
+<div>
     <mat-card>
         <mat-card-content>
-            @if(item.completed){
-            <mat-icon aria-hidden="false" color="green" aria-label="Example home icon"
-                fontIcon="done_outline"></mat-icon>
-            }@else {
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="highlight_off"></mat-icon>
-        }
-        {{item.title}}
-        
-        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit" (click)="getCard(item)"></mat-icon>
-        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete" (click)="deleteCard(item)"></mat-icon>
+            <div class="todo">
+                @if(item.completed){
+                <mat-icon aria-hidden="false" color="green" aria-label="Example home icon"
+                    fontIcon="done_outline"></mat-icon>
+                }@else {
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="highlight_off"></mat-icon>
+                }
+                <div class="todo-item">
+                    {{item.title}}
+                </div>
+            </div>
+            <div class="todo">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit"
+                    (click)="getCard(item)"></mat-icon>
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete"
+                    (click)="deleteCard(item)"></mat-icon>
+            </div>
 
         </mat-card-content>
     </mat-card>
 </div>
 }
 }
-

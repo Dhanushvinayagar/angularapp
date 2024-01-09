@@ -1,9 +1,24 @@
+button{
+    margin: 20px;;
+}
 mat-card{
     margin: 0 2% 1% 2%;
     border: .1px solid gray;
 }
 mat-card-content{
     display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+}
+mat-icon{
+    cursor: pointer;
+    margin-right: 20px;
+}
+.todo{
+    display: flex;
     align-items: center;
-    gap:1%;
+}
+
+.todo-item{
+    display: block;
 }

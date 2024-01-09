@@ -15,11 +15,6 @@
   ],
   "todo": [
     {
-      "id": 1,
-      "title": "Learn .NET framework",
-      "completed": true
-    },
-    {
       "id": 2,
       "title": "Build a web app",
       "completed": false
@@ -63,11 +58,6 @@
       "id": 10,
       "title": "Master Angular framework",
       "completed": false
-    },
-    {
-      "id": 11,
-      "title": "New Todo",
-      "completed": true
     }
   ]
 }
