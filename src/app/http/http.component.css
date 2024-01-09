@@ -1,0 +1,9 @@
+mat-card{
+    margin: 0 2% 1% 2%;
+    border: .1px solid gray;
+}
+mat-card-content{
+    display: flex;
+    align-items: center;
+    gap:1%;
+}

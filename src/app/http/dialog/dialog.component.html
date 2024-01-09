@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>{{title}} Todo </h1>
+<div mat-dialog-content>
+  <div (click)="changeCompleted()" class="completed">   
+    Completed :
+    @if(item.completed){
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="done_outline" ></mat-icon>
+    }@else {
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="highlight_off"></mat-icon>
+    }
+  </div>
+  <mat-form-field>
+    <mat-label>Todo</mat-label>
+    <input matInput [(ngModel)]="item.title">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="item" cdkFocusInitial>Ok</button>
+</div>
